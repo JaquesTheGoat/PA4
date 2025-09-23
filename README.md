@@ -87,14 +87,52 @@ Expected output:<b />
 
 Create a visualization that shows how features such as `Track`, `Gender`, and `Hometown` contribute to the **average grade**.
 
++ function:
+```python
+# Import matplotlib for plotting
+import matplotlib.pyplot as plt   
+
+# Load the CSV file into a DataFrame
+df = pd.read_csv('board.csv')     
+```
+#### + input:
+
+```python
+# Set figure size for the plot
+plt.figure(figsize=(6, 5))        
+
+# Create bar chart of Electronics by Track
+plt.bar(df['Track'], df['Electronics'])  
+
+
+```
+
 ### Expected Output
-<img width="563" alt="Screen Shot 2024-09-20 at 10 47 14 PM" src="https://github.com/user-attachments/assets/bf98554b-8721-4979-92e7-b283b5791719">
+
+<img width="521" height="454" alt="Screen Shot 2025-09-23 at 3 58 15 PM" src="https://github.com/user-attachments/assets/6fb23962-21a9-4fdf-a7c4-46e5b65c7485" />
 
 --- 
-<img width="557" alt="Screen Shot 2024-09-20 at 10 47 28 PM" src="https://github.com/user-attachments/assets/2a0776df-ee8d-4935-b50f-8b45d05f0315">
++ input:
+```python
+
+# Shows the gender
+plt.figure(figsize=(6, 5))
+plt.bar(board['Gender'], board['Electronics'])
+
+```
+
+<img width="572" height="451" alt="Screen Shot 2025-09-23 at 3 58 37 PM" src="https://github.com/user-attachments/assets/48d3414e-3979-49c5-92cf-60b494e07210" />
 
 --- 
-<img width="558" alt="Screen Shot 2024-09-20 at 10 47 36 PM" src="https://github.com/user-attachments/assets/a4c894db-87b3-4e16-a149-98791920dadb">
++ input:
+```python
+# Shows the Hometown
+plt.figure(figsize=(6, 5))
+plt.bar(board['Hometown'], board['Electronics'])
+
+```
+
+<img width="528" height="444" alt="Screen Shot 2025-09-23 at 3 58 54 PM" src="https://github.com/user-attachments/assets/b686691e-c0df-472b-902c-177ed4f23507" />
 
 
 
